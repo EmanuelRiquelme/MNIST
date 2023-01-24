@@ -28,7 +28,7 @@ def save_model(model):
     torch.save(model.state_dict(),f'{os.getcwd()}/model.pt')
 
 def validate(test_data,model,device):
-    it = iter(train_data)
+    it = iter(test_data)
     acc = []
     for _ in range(len(test_data)):
         input,target = next(it)
